@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/oxlint/configuration_schema.json",
+  "extends": ["base.json"],
+  "plugins": [
+    "eslint",
+    "import",
+    "jsx-a11y",
+    "nextjs",
+    "oxc",
+    "promise",
+    "react",
+    "typescript",
+    "unicorn"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/anchor-has-content": "error",
+    "jsx-a11y/anchor-is-valid": "error",
+    "jsx-a11y/click-events-have-key-events": "error",
+    "jsx-a11y/heading-has-content": "error",
+    "jsx-a11y/no-noninteractive-tabindex": "error",
+    "react/button-has-type": "error",
+    "react/exhaustive-deps": "error",
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-no-constructed-context-values": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/rules-of-hooks": "error",
+    "react/self-closing-comp": "error"
+  }
+}

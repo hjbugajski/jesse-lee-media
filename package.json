@@ -1,0 +1,47 @@
+{
+  "name": "jesse-lee-media",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "turbo run lint",
+    "lint:check": "turbo run lint:check",
+    "stylelint": "turbo run stylelint",
+    "stylelint:check": "turbo run stylelint:check",
+    "typecheck": "turbo run typecheck",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "nano-staged": "catalog:devDeps",
+    "oxfmt": "catalog:devDeps",
+    "oxlint": "catalog:devDeps",
+    "simple-git-hooks": "catalog:devDeps",
+    "stylelint": "catalog:devDeps",
+    "turbo": "catalog:devDeps",
+    "typescript": "catalog:devDeps"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec nano-staged"
+  },
+  "nano-staged": {
+    "*.{ts,tsx,js,jsx,mjs,cjs}": [
+      "oxlint --fix",
+      "oxfmt"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "oxfmt"
+    ],
+    "*.{json,jsonc}": "oxfmt",
+    "!(*.ts|*.tsx|*.js|*.jsx|*.mjs|*.cjs|*.css)": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
+  },
+  "packageManager": "pnpm@11.22.0"
+}

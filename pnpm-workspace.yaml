@@ -1,0 +1,44 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
+
+catalogMode: strict
+minimumReleaseAge: 1440
+
+catalogs:
+  deps:
+    '@payloadcms/db-postgres': 3.88.0
+    '@payloadcms/email-resend': 3.88.0
+    '@payloadcms/live-preview-react': 3.88.0
+    '@payloadcms/next': 3.88.0
+    '@payloadcms/richtext-lexical': 3.88.0
+    '@payloadcms/storage-s3': 3.88.0
+    '@payloadcms/ui': 3.88.0
+    '@t3-oss/env-nextjs': ^0.13.11
+    next: 16.3.2
+    payload: 3.88.0
+    react: ^19.2.8
+    react-dom: ^19.2.8
+    sharp: ^0.35.3
+    zod: ^4.4.3
+  devDeps:
+    '@tailwindcss/postcss': ^4.3.3
+    '@types/node': ^24.13.3
+    '@types/react': ^19.2.18
+    '@types/react-dom': ^19.2.4
+    nano-staged: ^1.0.2
+    oxfmt: ^0.64.0
+    oxlint: ^1.79.0
+    oxlint-tsgolint: ^7.0.2001
+    postcss: ^8.5.26
+    simple-git-hooks: ^2.13.1
+    stylelint: ^17.14.1
+    stylelint-config-clean-order: ^10.0.0
+    stylelint-config-standard: ^40.0.0
+    tailwindcss: ^4.3.3
+    turbo: ^2.10.11
+    typescript: ^7.0.2

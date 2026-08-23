@@ -1,0 +1,16 @@
+{
+  "name": "@jlm/stylelint-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.mjs"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "stylelint-config-clean-order": "catalog:devDeps",
+    "stylelint-config-standard": "catalog:devDeps"
+  },
+  "peerDependencies": {
+    "stylelint": "catalog:devDeps"
+  }
+}

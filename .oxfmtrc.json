@@ -1,0 +1,46 @@
+{
+  "$schema": "node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "ignorePatterns": ["**/importMap.js", "**/migrations/**", "**/payload-types.ts"],
+  "sortImports": {
+    "customGroups": [
+      {
+        "groupName": "next",
+        "elementNamePattern": ["next", "next/**"]
+      },
+      {
+        "groupName": "payload-config",
+        "elementNamePattern": ["@payload-config"]
+      },
+      {
+        "groupName": "react",
+        "elementNamePattern": ["react", "react-dom", "react-dom/**"]
+      },
+      {
+        "groupName": "repo",
+        "elementNamePattern": ["@jlm/**"]
+      }
+    ],
+    "groups": [
+      ["builtin", "type-builtin"],
+      ["react"],
+      ["next"],
+      ["external", "type-external"],
+      ["side_effect-external"],
+      ["payload-config"],
+      ["repo"],
+      ["internal", "type-internal", "parent", "type-parent", "sibling", "type-sibling"],
+      ["side_effect-internal", "side_effect-parent", "side_effect-sibling"],
+      ["index", "type-index"],
+      ["side_effect-index"],
+      ["style"],
+      ["unknown"]
+    ],
+    "newlinesBetween": true
+  },
+  "sortTailwindcss": {
+    "attributes": ["class", "className"],
+    "functions": ["cn", "cva"],
+    "preserveWhitespace": false
+  }
+}

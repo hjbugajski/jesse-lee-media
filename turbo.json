@@ -1,0 +1,49 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "inputs": ["$TURBO_DEFAULT$", "!.next/**", "$TURBO_ROOT$/packages/typescript-config/*.json"],
+      "outputs": [".next/types/**", "*.tsbuildinfo"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "generate:importmap": {
+      "cache": false
+    },
+    "generate:types": {
+      "cache": false
+    },
+    "lint": {
+      "cache": false
+    },
+    "lint:check": {
+      "inputs": ["$TURBO_DEFAULT$", "!.next/**", "$TURBO_ROOT$/packages/oxc-config/*.json"]
+    },
+    "stylelint": {
+      "cache": false
+    },
+    "stylelint:check": {
+      "inputs": [
+        "**/*.css",
+        "stylelint.config.mjs",
+        "package.json",
+        "$TURBO_ROOT$/packages/stylelint-config/base.mjs"
+      ]
+    },
+    "test": {
+      "inputs": ["$TURBO_DEFAULT$", "!.next/**"]
+    }
+  }
+}

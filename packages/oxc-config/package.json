@@ -1,0 +1,17 @@
+{
+  "name": "@jlm/oxc-config",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json"
+  ],
+  "devDependencies": {
+    "oxlint": "catalog:devDeps",
+    "oxlint-tsgolint": "catalog:devDeps"
+  },
+  "peerDependencies": {
+    "oxlint": "catalog:devDeps",
+    "oxlint-tsgolint": "catalog:devDeps"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "node_modules/oxlint/configuration_schema.json",
+  "options": {
+    "typeAware": true
+  },
+  "plugins": ["eslint", "import", "oxc", "promise", "typescript", "unicorn"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "error",
+    "perf": "error"
+  },
+  "rules": {
+    "curly": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "import/max-dependencies": "off",
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error",
+    "import/no-self-import": "error",
+    "import/no-unassigned-import": ["error", { "allow": ["**/*.css", "@payloadcms/next/css"] }],
+    "max-lines-per-function": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_status"] }],
+    "no-await-in-loop": "error",
+    "no-else-return": "error",
+    "no-eval": "error",
+    "no-lonely-if": "error",
+    "no-multi-assign": "error",
+    "no-redeclare": "off",
+    "no-unneeded-ternary": "error",
+    "no-var": "error",
+    "oxc/no-accumulating-spread": "error",
+    "prefer-const": "error",
+    "prefer-object-spread": "error",
+    "prefer-template": "error",
+    "promise/no-multiple-resolved": "error",
+    "sort-imports": [
+      "error",
+      {
+        "allowSeparatedGroups": true,
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+    "typescript/consistent-type-definitions": ["error", "interface"],
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-for-in-array": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-misused-spread": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "typescript/no-unsafe-type-assertion": "off",
+    "typescript/no-unsafe-argument": "error",
+    "typescript/prefer-optional-chain": "error",
+    "typescript/prefer-readonly-parameter-types": "off",
+    "typescript/prefer-ts-expect-error": "error",
+    "typescript/restrict-template-expressions": "error",
+    "unicorn/consistent-function-scoping": "error",
+    "unicorn/no-await-in-promise-methods": "error",
+    "unicorn/no-useless-spread": "error",
+    "unicorn/prefer-array-flat-map": "error",
+    "unicorn/prefer-array-some": "error",
+    "unicorn/prefer-optional-catch-binding": "error",
+    "unicorn/throw-new-error": "error"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/oxlint/configuration_schema.json",
+  "extends": ["./packages/oxc-config/base.json"],
+  "ignorePatterns": [
+    "**/.next/**",
+    "**/.next-env.d.ts",
+    "**/importMap.js",
+    "**/migrations/**",
+    "**/payload-types.ts"
+  ]
+}
